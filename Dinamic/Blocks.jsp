@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<%
+			String blocks = "";
+			if (request.getParameter("tXXVxXXV") != null) {
+				blocks += "-" + request.getParameter("tXXVxXXV") + "." + request.getParameter("cbXXVxXXV") + "\\n";
+			}
+			if (request.getParameter("tXLxXX") != null) {
+				blocks += "-" + request.getParameter("tXLxXX") + "." + request.getParameter("cbXLxXX") + "\\n";
+			}
+			if (request.getParameter("tBricks") != null) {
+				blocks += "-" + request.getParameter("tBricks") + "." + request.getParameter("cbBricks") + "\\n";
+			}
+			session.setAttribute("blocks", blocks);
+		%>
+		<script language="JavaScript" type="text/JavaScript">
+			<!--
+			function check() {
+				with (fBlocks) {
+					tXXVxXXV.disabled = !cbXXVxXXV.checked;
+					tXLxXX.disabled = !cbXLxXX.checked;
+					tBricks.disabled = !cbBricks.checked;
+				}
+			}
+			-->
+		</script>
+		<style type="text/css">
+			<!--
+			tr, td, th {
+				font-family: Verdana;
+				font-size: 10px;
+			}
+			
+			.2D {
+				font-family: Verdana;
+				font-size: 10px;
+				font-weight: bold;
+				background-color: #FFFFFF;
+				border: 1px solid #BFC7D2;
+			}
+			-->
+		</style>
+	</head>
+	<body bgColor="#EFF1F4" bottommargin="0" leftmargin="0" rightmargin="0" topmargin="0">
+		<Form id="fBlocks" method="GET" target="_self" action="#">
+			<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td>
+					</td>
+					<td>
+						<b>
+							Descripción
+						</b>
+					</td>
+					<td>
+						<b>
+							Precio
+						</b>
+					</td>
+					<td>
+						<b>
+							Cantidad
+						</b>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input name="cbXXVxXXV" type="CheckBox" value="Block 25 x 25 cm" checked onClick="check();">
+					</td>
+					<td>
+						25 x 25 cm
+					</td>
+					<td>
+						500
+					</td>
+					<td>
+						<input class="2D" name="tXXVxXXV" type="Text" size="6" value="1">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input name="cbXLxXX" type="CheckBox" value="Block 40 x 20 cm" checked onClick="check();">
+					</td>
+					<td>
+						40 x 20 cm
+					</td>
+					<td>
+						600
+					</td>
+					<td>
+						<input class="2D" name="tXLxXX" type="Text" size="6" value="1">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input name="cbBricks" type="CheckBox" value="Ladrillo" checked onClick="check();">
+					</td>
+					<td>
+						Ladrillos
+					</td>
+					<td>
+						400
+					</td>
+					<td>
+						<input class="2D" name="tBricks" type="Text" size="6" value="1">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+					</td>
+					<td>
+						<input class="2D" name="sAdd" type="submit" size="6" value="Agregar">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

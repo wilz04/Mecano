@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<script language="JavaScript" type="text/JavaScript">
+			<!--
+			function check() {
+				if (fCCard.tPwd.value == "") {
+					window.alert("Debes digitar tu Id!");
+					return false;
+				} else {
+					return true;
+				}
+			}
+			-->
+		</script>
+		<style type="text/css">
+			<!--
+			Input {
+				font-family: Verdana;
+				font-size: 10px;
+				font-weight: bold;
+				background-color: #BFC7D2;
+				border: 1px solid #000000;
+			}
+			.hide {
+				background-color: #FFFFCC;
+				border: 1px solid #FFFFCC;
+			}
+			-->
+    </style>
+	</head>
+	<body bgcolor="#DFE3E9" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+		<br>
+		<center>
+			<form id="fCCard" method="GET" target="_self" action="#">
+				<font size="2" face="Verdana">
+					<u>Crédito:</u><br>
+				</font>
+				<br>
+				<table width="300" border="1" borderColor="#DFE3E9" cellSpacing="2" cellPadding="2">
+					<tr>
+						<td align="right" height="30" bgColor="#EFF1F4" borderColor="#7F8EA5">
+							<font size="1" face="Verdana">
+								Id [pin]: &nbsp;
+							</font>
+						</td>
+						<td height="30" bgColor="#EFF1F4" borderColor="#7F8EA5">
+							&nbsp; <input name="tPwd" type="Password" size="25">
+							<input name="bUpdate" type="Button" value="Ver">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="right" height="120" bgColor="#FFFFCC" borderColor="#FFCC00">
+							<font size="1" face="Verdana">
+								Capital anterior: &nbsp;
+							</font>
+              <input class="hide" name="tBValue" type="text" size="15" readonly="true"><br>
+							<font size="1" face="Verdana">
+								Capital posterior [-total]: &nbsp;
+							</font>
+              <input class="hide" name="tAValue" type="text" size="15" readonly="true"><br>
+							<font size="1" face="Verdana">
+								Fecha de compra: &nbsp;
+							</font>
+              <input class="hide" name="tToday" type="text" size="15" readonly="true"><br>
+							<font size="1" face="Verdana">
+								Fecha de corte: &nbsp;
+							</font>
+              <input class="hide" name="tTime" type="text" size="15" readonly="true">
+						</td>
+					</tr>
+					<tr>
+						<td bgColor="#EFF1F4" borderColor="#7F8EA5">
+							&nbsp;
+						</td>
+						<td bgColor="#EFF1F4" borderColor="#7F8EA5">
+							&nbsp;
+						</td>
+					</tr>
+				</table>
+				<br>
+				<input id="sSend" type="Submit" value="Enviar" onClick="return check();">
+			</form>
+		</center>
+	</body>
+</html>

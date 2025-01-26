@@ -1,0 +1,154 @@
+<html>
+	<head>
+		<script language="JavaScript" type="text/JavaScript">
+			<!--
+			function sLoad() {
+				with (fMaterials) {
+					switch (sClass.selectedIndex) {
+						case 0:
+							sMaterial.length = 2;
+							sMaterial.options[0].text = "Block";
+							sMaterial.options[1].text = "Varilla";
+							break;
+						case 1:
+							sMaterial.length = 2;
+							sMaterial.options[0].text = "Tornillo";
+							sMaterial.options[1].text = "Tuerca";
+							break;
+						case 2:
+							sMaterial.length = 2;
+							sMaterial.options[0].text = "Clavo";
+							sMaterial.options[1].text = "Regla";
+							break;
+						case 3:
+							sMaterial.length = 2;
+							sMaterial.options[0].text = "Pegamento";
+							sMaterial.options[1].text = "Tubo";
+							break;
+					}
+				}
+			}
+			
+			function ifLoad() {
+				switch (fMaterials.sMaterial.options[fMaterials.sMaterial.selectedIndex].text) {
+					case "Block":
+						window.open("Blocks.htm", "ifDetails");
+						break;
+					case "Varilla":
+						window.open("Bars.htm", "ifDetails");
+						break;
+					case "Tornillo":
+						window.open("Screws.htm", "ifDetails");
+						break;
+					case "Tuerca":
+						window.open("Nuts.htm", "ifDetails");
+						break;
+					case "Clavo":
+						window.open("Nails.htm", "ifDetails");
+						break;
+					case "Regla":
+						window.open("Rules.htm", "ifDetails");
+						break;
+					case "Pegamento":
+						window.open("Pastes.htm", "ifDetails");
+						break;
+					case "Tubo":
+						window.open("Tubes.htm", "ifDetails");
+						break;
+				}
+			}
+			-->
+		</script>
+	  <style type="text/css">
+			<!--
+			Input, select, TextArea {
+				font-family: Verdana;
+				font-size: 10px;
+				font-weight: bold;
+				background-color: #BFC7D2;
+				border: 1px solid #000000;
+			}
+			.hide {
+				background-color: #FFFFCC;
+				border: 1px solid #FFFFCC;
+			}
+			-->
+    </style>
+	</head>
+	<body bgcolor="#DFE3E9" onLoad="sLoad(); ifLoad();">
+		<center>
+			<br>
+			<font size="5" face="Verdana">
+				<b>Gracias por comprar nuestros productos!</b><br>
+			</font>
+			<br>
+			<form id="fMaterials" method="POST" target="_self" action="Submit.htm">
+				<font size="2" face="Verdana">
+					<u>Carrito de Compras:</u><br>
+				</font>
+				<br>
+				<table width="300" border="1" borderColor="#DFE3E9" cellSpacing="2" cellPadding="2">
+					<tr>
+						<td bgColor="#EFF1F4" borderColor="#7F8EA5">&nbsp;
+							
+						</td>
+						<td bgColor="#EFF1F4" borderColor="#7F8EA5">&nbsp;
+							
+						</td>
+					</tr>
+					<tr>
+						<td align="right" height="30" bgColor="#EFF1F4" borderColor="#7F8EA5">
+							<font size="1" face="Verdana">
+								Clase: &nbsp;
+							</font>
+						</td>
+						<td height="30" bgColor="#EFF1F4" borderColor="#7F8EA5">
+							&nbsp;
+							<select name="sClass" onChange="sLoad(); ifLoad();">
+								<option>Construcción</option>
+								<option>Mecánica</option>
+								<option>Carpinteria</option>
+								<option>Plomeria</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td align="right" height="30" bgColor="#EFF1F4" borderColor="#7F8EA5">
+							<font size="1" face="Verdana">
+								Material: &nbsp;
+							</font>
+						</td>
+						<td height="30" bgColor="#EFF1F4" borderColor="#7F8EA5">
+							&nbsp;
+							<select name="sMaterial" onChange="ifLoad();">
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td align="right" height="90" bgColor="#EFF1F4" borderColor="#7F8EA5">
+							<font size="1" face="Verdana">
+								Detalles: &nbsp;<br>
+							</font>
+							<br>
+							<br>
+						</td>
+						<td height="30" bgColor="#EFF1F4" borderColor="#7F8EA5">
+							<IFrame name="ifDetails" width="220" height="100" frameborder="0">
+							</IFrame>
+						</td>
+					</tr>
+					<tr>
+						<td bgColor="#EFF1F4" borderColor="#7F8EA5">
+							&nbsp;
+						</td>
+						<td bgColor="#EFF1F4" borderColor="#7F8EA5">
+							&nbsp;
+						</td>
+					</tr>
+				</table>
+				<br>
+				<input id="sSend" type="Submit" value="Enviar">
+			</form>
+		</center>
+	</body>
+</html>
